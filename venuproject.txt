@@ -1,0 +1,442 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student
+{
+char cname[20];
+int seats;
+}stu;
+
+class show
+{
+public:
+stu s[5][5];
+char moviename[20];
+char date[10];
+char time[6];
+
+int sa=25;
+int id=1,id1=1,id2=1;
+
+void ticket();
+void ticket1();
+void ticket2();
+
+void booking()
+{
+cout<<"Enter moviename  =";
+cin>>moviename;
+cout<<endl;
+cout<<"enter date =";
+cin>>date;
+cout<<endl;
+cout<<"Enter show time either 11:30 or 1:20 or 6:30";
+cin>>time;
+cout<<endl;
+
+
+    
+if(time=="11:30")
+{
+                for(int i=0;i<5;i++)
+
+                        for(int j=0;j<5;j++) 
+
+                {                      
+
+                cout<<"\tPlease enter  number of seats = ";
+
+                cin>>s[i][j].seats;
+             
+                if(s[i][j].seats<=sa)
+
+                {
+
+                cout<<"Enter customer name =";
+
+                cin>>s[i][j].cname;
+                 ticket();
+
+                id++;
+
+                        }
+
+                sa=sa-s[i][j].seats;
+
+                 
+
+                
+
+                
+
+                menu();
+
+                }
+
+                if(sa<=0)
+
+                {
+
+           cout<<"Sorry there r no tickets";             
+           cout<endl;
+           cout<<"\n THANK YOU \n";             
+
+                   menu();
+
+                }
+
+                 
+
+                if(s[i][j].seats>sa)
+
+                   {                              
+                                cout<<endl;
+                                cout<<"There are only"<<sa<<"reamined";
+                                menu();
+
+                    }
+
+        }
+if(time=="1:20")
+               {
+                for(int i=0;i<5;i++)
+
+                        for(int j=0;j<5;j++) 
+
+                {                      
+
+                cout<<"\tPlease enter  number of seats = ";
+
+                cin>>s[i][j].seats;
+             
+                if(s[i][j].seats<=sa)
+
+                {
+
+                cout<<"Enter customer name =";
+
+                cin>>s[i][j].cname;
+                 ticket1();
+
+                id++;
+
+                        }
+
+                sa=sa-s[i][j].seats;
+
+                 
+
+                
+
+                
+
+                menu();
+
+                }
+
+                if(sa<=0)
+
+                {
+
+           cout<<"Sorry there r no tickets";             
+           cout<endl;
+           cout<<"\n THANK YOU \n";             
+
+                   menu();
+
+                }
+
+                 
+
+                if(s[i][j].seats>sa)
+
+                   {                              
+                                cout<<endl;
+                                cout<<"There are only"<<sa<<"reamined";
+                                menu();
+
+                    }
+
+        }
+  if(time=="6:30pm")
+{
+ for(int i=0;i<5;i++)
+
+                        for(int j=0;j<5;j++) 
+
+                {                      
+
+                cout<<"\tPlease enter  number of seats = ";
+
+                cin>>s[i][j];
+             
+                if(s[i][j].seats<=sa)
+
+                {
+
+                cout<<"Enter customer name =";
+
+                cin>>s[i][j].cname;
+                 ticket2();
+
+                id++;
+
+                        }
+
+                sa=sa-s[i][j].seats;
+
+                 
+
+                
+
+                
+
+                return; 
+
+                }
+
+                if(sa<=0)
+
+                {
+
+           cout<<"Sorry there r no tickets";             
+           cout<endl;
+           cout<<"\n THANK YOU \n";             
+
+                   menu();
+
+                }
+
+                 
+
+                if(s[i][j].seats>sa)
+
+                   {                              
+                                cout<<endl;
+                                cout<<"There are only"<<sa<<"reamined";
+                                menu();
+
+                    }
+
+        }
+}
+};
+         
+        
+
+        {
+
+        cout<<endl;
+
+         
+
+        cout<<"\n    THEATER BOOKING TICKET    \n");
+
+        
+
+        cout<<"booking id="<<id<<"moviename="<<moviename;
+
+        cout<<"customer="<<cname;
+        
+        cout<<"On date="<<date;
+
+       cout<<"At time="<<time;
+        
+        
+        }
+
+
+ void show::ticket1()
+
+        {
+
+        cout<<endl;
+
+         
+
+        cout<<"\n    THEATER BOOKING TICKET    \n");
+
+        
+
+        cout<<"booking id="<<id1<<"moviename="<<moviename;
+
+        cout<<"customer="<<cname;
+        
+        cout<<"On date="<<date;
+
+       cout<<"At time="<<time;
+        
+        
+        }
+ void show::ticket2()
+
+        {
+
+        cout<<endl;
+
+         
+
+        cout<<"\n    THEATER BOOKING TICKET    \n");
+
+        
+
+        cout<<"booking id="<<id2<<"moviename="<<moviename;
+
+        cout<<"customer="<<cname;
+        
+        cout<<"On date="<<date;
+
+       cout<<"At time="<<time;
+        
+        
+        }
+
+
+void show::records()   
+        {      
+
+        
+cout<<"enter time of show either 11:30 or 1:20 or 6:30"<<endl;
+         
+if(time=="11:30")
+{
+
+                cout<<"\n  SHOW RECORDS \n"); 
+
+                
+
+                cout<<"Seats left =  "<<sa<<" ";
+menu();
+    }
+if(time=="1:20")
+{             
+ cout<<"\n  SHOW RECORDS \n"); 
+
+                
+
+                cout<<"Seats left =  "<<sa<<" ";
+menu();
+}
+if(time=="6:30")
+{
+ cout<<"\n  SHOW RECORDS \n"); 
+
+                
+
+                cout<<"Seats left =  "<<sa<<" ";
+menu();
+}
+
+}
+ void show::canceltickets()
+
+         {
+cout<<"enter time of show either 11:30 or 1:20 or 6:30"<<endl;
+
+   if(time=="11:30)
+{
+              cout<<"Enter customer name to be cancel:";
+
+              cin>>customername;
+
+              for(int i=0; i<5 ; i++)
+
+              {
+
+                      for (int j =0 ; j<5; j++)
+
+                      {
+
+                          if (strcmp(s[i][j].cname ,customername) == 0)
+
+                          {
+
+                                         
+
+                                         sa++;
+
+                          }
+                   }
+
+              }
+
+if(time=="1:20")
+{
+            cout<<"Enter customer name to be cancel:";
+
+              cin>>customername;
+
+              for(int i=0; i<5 ; i++)
+
+              {
+
+                      for (int j =0 ; j<5; j++)
+
+                      {
+
+                          if (strcmp(s[i][j].cname ,customername) == 0)
+
+                          {
+
+                                         
+
+                                         sa++;
+
+                          }
+                   }
+
+              }
+if(time=="6:30")
+{
+            cout<<"Enter customer name to be cancel:";
+
+              cin>>customername;
+
+              for(int i=0; i<5 ; i++)
+
+              {
+
+                      for (int j =0 ; j<5; j++)
+
+                      {
+
+                          if (strcmp(s[i][j].cname ,customername) == 0)
+
+                          {
+
+                                         
+
+                                         sa++;
+
+                          }
+                   }
+
+              }
+menu();
+}
+void show::menu()
+{
+int d;
+do
+{
+cout<<"\n choose 1:booking 2:records 3:canceltickets 4:exit \n";
+cin>>d;
+switch(d)
+{
+case 1:booking();
+       break;
+case 2:records();
+       break;
+case 3:canceltickets();
+       break;
+}
+}while(d<4)
+}
+void main()
+{
+        show s;
+        clrscr();
+        s.menu();
+        getch();
+}
